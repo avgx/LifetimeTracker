@@ -29,7 +29,7 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
 
     weak var lifetimeTrackerListViewController: LifetimeTrackerListViewController?
 
-    fileprivate var formerStatusBarStyle = UIApplication.shared.statusBarStyle
+    //fileprivate var formerStatusBarStyle = UIApplication.shared.statusBarStyle
 
     private var didInitializeRoundView = false
 
@@ -159,8 +159,8 @@ class CircularDashboardViewController: UIViewController, LifetimeTrackerViewable
     }()
 
     @objc func showPopover() {
-        formerStatusBarStyle = UIApplication.shared.statusBarStyle
-        UIApplication.shared.statusBarStyle = .default
+        //formerStatusBarStyle = UIApplication.shared.statusBarStyle
+        //UIApplication.shared.statusBarStyle = .default
         updatePopoverVisibility(to: .open)
     }
 
@@ -187,7 +187,7 @@ extension CircularDashboardViewController: PopoverViewControllerDelegate {
 
     func dismissPopoverViewController() {
         updatePopoverVisibility(to: .closed)
-        UIApplication.shared.statusBarStyle = formerStatusBarStyle
+        //UIApplication.shared.statusBarStyle = formerStatusBarStyle
     }
 }
 
